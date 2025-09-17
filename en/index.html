@@ -15,20 +15,19 @@
     nav a { margin: 0 10px; text-decoration: none; color: #007acc; }
     h2 { border-bottom: 1px solid #ddd; padding-bottom: 4px; }
     ol.brackets {
-  list-style: none;       /* remove default numbering */
-  padding-left: 0;
-  counter-reset: item;    /* initialize counter */
-}
-
-ol.brackets li {
-  counter-increment: item; /* browser handles reversed automatically */
-  margin-bottom: 0.5em;
-}
-
-ol.brackets li::before {
-  content: "[" counter(item) "] "; /* wrap number in brackets */
-  font-weight: bold;
-}
+      list-style: none;      /* remove default numbers */
+      padding-left: 0;
+    }
+      ol.brackets li {
+      margin-bottom: 0.5em;
+    }
+      ol.brackets li::marker {
+      /* no marker because list-style is none */
+    }
+      ol.brackets li::before {
+      content: "[" attr(value) "] "; /* use the manual value */
+      font-weight: bold;
+    }
 </style>
 </head>
 <body>
@@ -53,9 +52,9 @@ ol.brackets li::before {
 
   <section id="publications">
     <h2>Publications</h2>
-    <ol class="brackets" reversed>
-      <li>Weighted central limit theorems for central values of L-functions, J. Eur. Math. Soc. 27 (2025), 2477-2529.</li>
-      <li>(with K. Smith) Negative moments of the Riemann zeta function, Bull. London Math. Soc. 56 (2024), 2680-2703.</li>
+    <ol class="brackets">
+      <li value="2">Weighted central limit theorems for central values of L-functions, J. Eur. Math. Soc. 27 (2025), 2477-2529.</li>
+      <li value="1">(with K. Smith) Negative moments of the Riemann zeta function, Bull. London Math. Soc. 56 (2024), 2680-2703.</li>
     </ol>
   </section>
 </body>
