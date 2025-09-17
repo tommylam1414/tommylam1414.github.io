@@ -15,27 +15,21 @@
     nav a { margin: 0 10px; text-decoration: none; color: #007acc; }
     h2 { border-bottom: 1px solid #ddd; padding-bottom: 4px; }
     ol.brackets {
-  counter-reset: pubcount; /* will set automatically later */
-  list-style: none;
+  list-style: none;       /* remove default numbering */
   padding-left: 0;
+  counter-reset: item;    /* initialize counter */
 }
 
-ol.brackets.reversed {
-  counter-reset: pubcount var(--count);
-}
-
-ol.brackets.reversed li {
-  counter-increment: pubcount -1; /* decrement the counter */
+ol.brackets li {
+  counter-increment: item; /* browser handles reversed automatically */
   margin-bottom: 0.5em;
 }
 
 ol.brackets li::before {
-  content: "[" counter(pubcount) "] ";
+  content: "[" counter(item) "] "; /* wrap number in brackets */
   font-weight: bold;
 }
-
-
-  </style>
+</style>
 </head>
 <body>
   <header>
