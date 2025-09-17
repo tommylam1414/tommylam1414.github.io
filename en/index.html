@@ -15,13 +15,17 @@
     nav a { margin: 0 10px; text-decoration: none; color: #007acc; }
     h2 { border-bottom: 1px solid #ddd; padding-bottom: 4px; }
     ol.brackets {
-  counter-reset: pubcount;
-  list-style: none; /* remove default numbers */
+  counter-reset: pubcount; /* will set automatically later */
+  list-style: none;
   padding-left: 0;
 }
 
-ol.brackets li {
-  counter-increment: pubcount;
+ol.brackets.reversed {
+  counter-reset: pubcount var(--count);
+}
+
+ol.brackets.reversed li {
+  counter-increment: pubcount -1; /* decrement the counter */
   margin-bottom: 0.5em;
 }
 
@@ -29,6 +33,7 @@ ol.brackets li::before {
   content: "[" counter(pubcount) "] ";
   font-weight: bold;
 }
+
 
   </style>
 </head>
@@ -54,7 +59,7 @@ ol.brackets li::before {
 
   <section id="publications">
     <h2>Publications</h2>
-    <ol class="brackets">
+    <ol class="brackets reversed">
       <li>Weighted central limit theorems for central values of L-functions, J. Eur. Math. Soc. 27 (2025), 2477-2529.</li>
       <li>(with K. Smith) Negative moments of the Riemann zeta function, Bull. London Math. Soc. 56 (2024), 2680-2703.</li>
     </ol>
