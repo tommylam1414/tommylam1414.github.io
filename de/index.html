@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8">
+  <title>Tommy R. J. Lam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-language" content="de">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body { font-family: "Times New Roman", Times, serif; max-width: 800px; margin: auto; padding: 20px; line-height: 1.6; }
+    header { text-align: center; margin-bottom: 40px; }
+    nav a { margin: 0 10px; text-decoration: none; color: #007acc; }
+    h2 { border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tommy Lam</h1>
+    <nav>
+      <a href="#about-research">Über mich & Forschung</a>
+      <a href="#publications">Publikationen</a>
+      <a href="#talks">Vorträge</a>
+      <a href="#teaching">Lehre</a>
+      <a href="#files">Dateien</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <section id="about-research">
+    <h2>Über mich & Forschung</h2>
+    <p>Ich bin Doktorand in Reiner Mathematik an der University of Sydney, Australien.
+       Meine Forschungsinteressen umfassen Algebra, Topologie und Analysis.</p>
+    <p>Mein Lieblingstheorem ist der Primzahlsatz:</p>
+    <p>\[ \pi(n) \sim \frac{n}{\log n} \]</p>
+  </section>
+
+  <section id="publications">
+    <h2>Publikationen</h2>
+    <ol class="brackets">
+      <li value="3">„Über eine Eigenschaft von X“, Journal of Pure Math (2024).</li>
+      <li value="2">„Eine Anmerkung zu Y“, Konferenzband (2023).</li>
+      <li value="1">„Erkundungen zu Z“, Algebraic Structures Journal (2022).</li>
+    </ol>
+  </section>
+
+  <section id="talks">
+    <h2>Vorträge</h2>
+    <ul>
+      <li>„Titel des Vortrags A“, Workshop über Reine Mathematik, Sydney, März 2025.</li>
+    </ul>
+  </section>
+
+  <section id="teaching">
+    <h2>Lehre</h2>
+    <h3>2025 – Semester 1</h3>
+    <ul>
+      <li>Dozent, Analysis II (MATH1022)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Kontakt</h2>
+    <p>Email: your.email@university.edu</p>
+    <p>
+      Akademische Profile:
+      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a> |
+      <a href="https://www.scopus.com/authid/detail.uri?authorId=YOUR_ID" target="_blank">Scopus</a> |
+      <a href="https://orcid.org/YOUR_ORCID" target="_blank">ORCID</a>
+    </p>
+  </section>
+
+  <hr>
+  <footer>
+    <p id="last-updated"></p>
+  </footer>
+
+  <script>
+    const lastUpdated = new Date(document.lastModified);
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    document.getElementById("last-updated").textContent =
+      `Letzte Aktualisierung: ${lastUpdated.toLocaleDateString('de-DE', options)}`;
+  </script>
+</body>
+</html>
