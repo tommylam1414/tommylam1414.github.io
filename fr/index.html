@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tommy R. J. Lam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-language" content="fr">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body { font-family: "Times New Roman", serif; max-width: 800px; margin: auto; padding: 20px; line-height: 1.6; }
+    header { text-align: center; margin-bottom: 40px; }
+    nav a { margin: 0 10px; text-decoration: none; color: #007acc; }
+    h2 { border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+    ol.brackets { counter-reset: item; }
+    ol.brackets li { display: block; }
+    ol.brackets li:before { content: "[" counter(item) "] "; counter-increment: item; }
+    footer { margin-top: 40px; font-size: small; text-align: center; color: #555; }
+    .lang-switch { margin-bottom: 10px; text-align: right; }
+    .lang-switch a { margin-left: 10px; font-size: small; color: #007acc; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    Langues:
+    <a href="/en/">English</a> |
+    <a href="/de/">Deutsch</a>
+  </div>
+
+  <header>
+    <h1>Tommy Lam</h1>
+    <nav>
+      <a href="#about">À propos & Recherche</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Enseignement</a>
+      <a href="#talks">Conférences</a>
+      <a href="#files">Fichiers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>À propos & Recherche</h2>
+    <p>Je suis doctorant en mathématiques pures à l'Université de Sydney, Australie. 
+       Mes intérêts de recherche incluent l’algèbre, la topologie et l’analyse.</p>
+    <p>Mon théorème préféré est le théorème des nombres premiers :</p>
+    <p>\( \pi (n) \sim \frac{n}{\log n} \).</p>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ol class="brackets" reversed>
+      <li>"Weighted central limit theorems for central values of \( \mathcal{L} \)-functions"</li>
+    </ol>
+  </section>
+
+  <section id="teaching">
+    <h2>Enseignement</h2>
+    <h3>Semestre 1 – 2025</h3>
+    <ul>
+      <li>Chargé de cours, Calculus II (MATH1022), University of Sydney</li>
+    </ul>
+  </section>
+
+  <section id="talks">
+    <h2>Conférences</h2>
+    <ul>
+      <li>"Titre de la conférence", The University of Tokyo, mai 2024.</li>
+    </ul>
+  </section>
+
+  <section id="files">
+    <h2>Fichiers</h2>
+    <p><a href="cv.pdf">Télécharger mon CV</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email : <a href="mailto:your.email@sydney.edu.au">your.email@sydney.edu.au</a></p>
+    <p>
+      <a href="https://scholar.google.com/">Google Scholar</a> |
+      <a href="https://www.scopus.com/">Scopus</a> |
+      <a href="https://orcid.org/">ORCID</a>
+    </p>
+  </section>
+
+  <footer>
+    <p id="last-updated"></p>
+    <script>
+      const lastUpdated = new Date(document.lastModified);
+      const options = { day: 'numeric', month: 'long', year: 'numeric' };
+      document.getElementById("last-updated").textContent =
+        `Dernière mise à jour : ${lastUpdated.toLocaleDateString('fr-FR', options)}`;
+    </script>
+  </footer>
+</body>
+</html>
